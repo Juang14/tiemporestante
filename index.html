@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can Juan Timeleft - Restaurante de Alta Cocina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Modal de Cookies -->
+    <div id="cookieModal" class="modal">
+        <div class="modal-content">
+            <h2>🍪 Política de Cookies Esenciales</h2>
+            <p>En Can Juan Timeleft valoramos su privacidad y la seguridad de sus datos culinarios.</p>
+            <p>Utilizamos cookies esenciales para garantizar el funcionamiento óptimo de nuestro sistema de reservas y para recordar sus preferencias gastronómicas. Nuestros servidores cuentan con <strong>seguridad con encriptación SAR garantizada</strong> para proteger información sensible como su nivel de hambre y tolerancia a los condimentos.</p>
+            
+            <div class="cookie-list">
+                <h3>Estas cookies nos permiten:</h3>
+                <ul>
+                    <li>• Recordar si prefiere mesa junto a la ventana (única disponible)</li>
+                    <li>• Guardar su historial de alergias alimentarias</li>
+                    <li>• Optimizar el tiempo de precalentamiento del horno</li>
+                    <li>• Sincronizar ladridos de nuestro personal de sala</li>
+                </ul>
+            </div>
+            
+            <p><small>Al continuar navegando, acepta nuestro uso responsable de cookies y confirma que está preparado para una experiencia culinaria doméstica de alto nivel.</small></p>
+            <p><small><strong>Política de privacidad:</strong> Sus datos nunca saldrán de esta casa.</small></p>
+            
+            <button id="acceptCookies" class="btn-primary">Aceptar Cookies Esenciales</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="restaurant-name">CAN JUAN TIMELEFT</h1>
+            <p class="slogan">tiempo restante</p>
+            <p class="subtitle">traducido literal y gráficamente</p>
+            <div class="hero-description">
+                <p>Siéntete catapultada a una experiencia culinaria única en el corazón de tu hogar.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#gallery">Galería</a></li>
+            <li><a href="#team">Equipo</a></li>
+            <li><a href="#reviews">Reseñas</a></li>
+            <li><a href="#awards">Reconocimientos</a></li>
+            <li><a href="#reservations">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sobre Nosotros -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Una Experiencia Única</h2>
+            <p class="lead">En Can Juan Timeleft, cada plato es una obra de arte y cada momento una eternidad de sabor. Nuestra propuesta gastronómica combina la tradición culinaria casera con la innovación de la alta cocina.</p>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <h2>Nuestras Instalaciones</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/cocina.png" alt="Cocina profesional Can Juan Timeleft">
+                    <div class="gallery-overlay">
+                        <h3>Cocina de Alta Gama</h3>
+                        <p>Equipamiento profesional para experiencias únicas</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/perras-camareras.png" alt="Personal de sala profesional">
+                    <div class="gallery-overlay">
+                        <h3>Personal Especializado</h3>
+                        <p>Nuestro equipo de sala altamente cualificado</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/betik-toallitas.png" alt="Toallitas refrescantes BETIK">
+                    <div class="gallery-overlay">
+                        <h3>Amenities de Lujo</h3>
+                        <p>Toallitas refrescantes premium para la experiencia post-degustación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2>Nuestro Equipo</h2>
+            <p class="team-description">Le atenderemos con voz no baja. Nuestro personal especializado cuenta con años de experiencia en tratamiento VIP y colas que no paran de moverse.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Chef Ejecutivo</h3>
+                    <p>Especialista en cocina de proximidad con formación autodidacta y pasión por la excelencia culinaria.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Pulgas - Jefa de Sala</h3>
+                    <p>Responsable de la atención al cliente y supervisión del comedor. Especialista en crear ambiente acogedor.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Tofu - Asistente de Sala</h3>
+                    <p>Encargada de la limpieza post-servicio y control de calidad de sobras. Siempre dispuesta a colaborar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <h2>Lo Que Dicen de Nosotros</h2>
+            <div class="reviews-grid">
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Woof woof, guau guau woof"</p>
+                    <p class="review-translation"><em>Traducción: Excelente servicio, las sobras siempre frescas</em></p>
+                    <p class="reviewer">- Pulgas, Jefa de Sala</p>
+                </div>
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Guau woof woof guau"</p>
+                    <p class="review-translation"><em>Traducción: Ambiente familiar, me dejan lamer los platos</em></p>
+                    <p class="reviewer">- Tofu, Asistente de Sala</p>
+                </div>
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"El pan muy rico"</p>
+                    <p class="reviewer">- Papá, Cliente satisfecho</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reconocimientos -->
+    <section id="awards" class="section">
+        <div class="container">
+            <h2>Reconocimientos</h2>
+            <div class="awards-grid">
+                <div class="award">
+                    <div class="award-icon">🍊</div>
+                    <h3>"Naranjas de Oro 2024"</h3>
+                    <p>Mejor cultivo doméstico de cítricos</p>
+                </div>
+                <div class="award">
+                    <div class="award-icon">🍅</div>
+                    <h3>"Premio Tomate Supremo"</h3>
+                    <p>Excelencia en horticultura casera</p>
+                </div>
+                <div class="award">
+                    <div class="award-icon">🌱</div>
+                    <h3>"Certificado de Calidad Huerto Propio"</h3>
+                    <p>Ingredientes km 0 (literalmente 0)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservas -->
+    <section id="reservations" class="section reservations-section">
+        <div class="container">
+            <h2>Reservas</h2>
+            <div class="reservation-info">
+                <p class="info-item">📅 Abrimos solo para gente que empieza a funcionar a partir de las 19h</p>
+                <p class="info-item">⏰ A la fecha que seleccione se le sumarán 15 minutos por defecto</p>
+                <p class="info-item">👥 Experiencia íntima garantizada - Aforo limitado a 2 comensales</p>
+                <p class="info-item">👔 Dress code: Pijama y temática pirata permitida</p>
+            </div>
+
+            <form action="https://formspree.io/f/xgvzeaag" method="POST" class="reservation-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Fecha de reserva:</label>
+                    <input type="date" id="date" name="date" required min="">
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Hora preferida:</label>
+                    <select id="time" name="time" required>
+                        <option value="">Seleccione una hora</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Composición de la mesa:</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">¿Quién viene a cenar?</option>
+                        <option value="pareja-sola" disabled>1 (chef no incluido) - ❌ IMPOSIBLE</option>
+                        <option value="solo-chef" disabled>Solo el chef (cenando solo) - ❌ MUY TRISTE</option>
+                        <option value="con-amigos" disabled>Con amigos (aforo superado) - ❌ CASA PEQUEÑA</option>
+                        <option value="pareja-chef">1 + el chef (ÚNICA OPCIÓN DISPONIBLE) ✅</option>
+                    </select>
+                    <small class="form-note">*Nota: El chef vive aquí, así que técnicamente siempre está incluido</small>
+                </div>
+                                
+                <div class="form-group">
+                    <label>¿Tiene intolerancia o alergia al ajo?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="ajo[]" value="intolerancia"> Intolerancia al ajo</label>
+                        <label><input type="checkbox" name="ajo[]" value="alergia"> Alergia al ajo</label>
+                        <label><input type="checkbox" name="ajo[]" value="ninguna"> Ninguna de las anteriores</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Peticiones especiales:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Alergias, preferencias culinarias, etc."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Solicitar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Can Juan Timeleft. Todos los derechos reservados.</p>
+            <p>Una experiencia culinaria doméstica de alto nivel.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

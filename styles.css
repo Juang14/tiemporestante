@@ -1,0 +1,766 @@
+/* Variables CSS */
+:root {
+    --primary-gold: #d4af37;
+    --dark-gold: #b8941f;
+    --elegant-black: #1a1a1a;
+    --soft-black: #2d2d2d;
+    --cream-white: #fefefe;
+    --warm-white: #f8f8f8;
+    --text-gray: #666;
+    --border-gray: #e0e0e0;
+}
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--elegant-black);
+    background-color: var(--cream-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--elegant-black);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Modal de Cookies */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(5px);
+    overflow-y: auto; /* Permitir scroll */
+    padding: 20px; /* Padding para móviles */
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: var(--cream-white);
+    margin: auto;
+    padding: 3rem;
+    border: none;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh; /* Altura máxima */
+    overflow-y: auto; /* Scroll interno si es necesario */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: modalSlideIn 0.3s ease-out;
+    position: relative; /* Para centrado correcto */
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h2 {
+    color: var(--primary-gold);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.cookie-list {
+    text-align: left;
+    margin: 2rem 0;
+    background-color: var(--warm-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-gold);
+}
+
+.cookie-list h3 {
+    color: var(--elegant-black);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.cookie-list ul {
+    list-style: none;
+    color: var(--text-gray);
+}
+
+.cookie-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive para modal */
+@media (max-width: 768px) {
+    .modal {
+        padding: 10px;
+        align-items: flex-start; /* Alineación superior en móvil */
+        padding-top: 20px;
+    }
+    
+    .modal-content {
+        padding: 2rem;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        border-radius: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .cookie-list {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .cookie-list h3 {
+        font-size: 1.1rem;
+    }
+    
+    .cookie-list li {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: 5px;
+        padding-top: 10px;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+        font-size: 0.85rem;
+        max-height: 95vh;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .cookie-list {
+        padding: 0.8rem;
+        margin: 1rem 0;
+    }
+    
+    .cookie-list h3 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .cookie-list li {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: 1rem;
+        width: 100%;
+    }
+}
+
+/* Para pantallas muy altas */
+@media (min-height: 800px) {
+    .modal {
+        align-items: center;
+    }
+}
+
+/* Botones */
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-gold), var(--dark-gold));
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Header/Hero */
+.hero {
+    background: linear-gradient(135deg, var(--elegant-black) 0%, var(--soft-black) 100%);
+    color: var(--cream-white);
+    text-align: center;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23d4af37" opacity="0.1"/><circle cx="80" cy="40" r="0.5" fill="%23d4af37" opacity="0.1"/><circle cx="40" cy="80" r="1.5" fill="%23d4af37" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.restaurant-name {
+    background: linear-gradient(45deg, var(--primary-gold), #f4e99b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary-gold);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Navegación */
+.main-nav {
+    background-color: var(--cream-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav li {
+    margin: 0 1rem;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+    color: var(--elegant-black);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.main-nav a:hover {
+    color: var(--primary-gold);
+    border-bottom-color: var(--primary-gold);
+}
+
+/* Secciones */
+.section {
+    padding: 6rem 0;
+}
+
+.section:nth-child(even) {
+    background-color: var(--warm-white);
+}
+
+.lead {
+    font-size: 1.3rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
+
+/* Galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(26, 26, 26, 0.9));
+    color: white;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+/* Equipo */
+.team-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-member h3 {
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+/* Reseñas */
+.reviews-section {
+    background: linear-gradient(135deg, var(--warm-white) 0%, #f0f0f0 100%);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.review {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 4px solid var(--primary-gold);
+}
+
+.stars {
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+.review-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: var(--elegant-black);
+}
+
+.review-translation {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.reviewer {
+    font-weight: 600;
+    color: var(--primary-gold);
+}
+
+/* Reconocimientos */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.award {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.award:hover {
+    transform: translateY(-5px);
+}
+
+.award-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.award h3 {
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Reservas */
+.reservations-section {
+    background: linear-gradient(135deg, var(--elegant-black) 0%, var(--soft-black) 100%);
+    color: var(--cream-white);
+}
+
+.reservations-section h2 {
+    color: var(--cream-white);
+}
+
+.reservation-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.info-item {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.reservation-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--elegant-black);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Grupo de checkboxes para intolerancia/alergia al ajo */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: flex-start;
+    max-width: 350px;
+}
+.checkbox-group label {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0;
+    white-space: nowrap;
+    word-break: normal;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--elegant-black);
+    color: var(--cream-white);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    /* Navegación móvil mejorada */
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0.5rem 0;
+    }
+    
+    .main-nav li {
+        margin: 0 0.5rem 0.5rem 0.5rem;
+    }
+    
+    .main-nav a {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.9rem;
+        border-bottom: 2px solid transparent;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+    
+    .modal-content {
+        padding: 2rem;
+        margin: 20px;
+    }
+    
+    .reservation-form {
+        padding: 2rem;
+        margin: 0 20px;
+    }
+    
+    /* Secciones más compactas en móvil */
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+    }
+    
+    /* Ajustes adicionales para móvil */
+    .team-grid,
+    .reviews-grid,
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .gallery-grid {
+        gap: 1.5rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    /* Navegación aún más compacta */
+    .main-nav ul {
+        padding: 0.5rem;
+    }
+    
+    .main-nav a {
+        padding: 0.6rem 0.3rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Formulario móvil */
+    .reservation-form {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+        margin: 10px;
+    }
+}
+
+/* Móviles en horizontal */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+}
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estados de carga del formulario */
+.form-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.form-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.form-note {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-gray);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Estilo para opciones deshabilitadas */
+.form-group select option:disabled {
+    color: #999;
+    background-color: #f5f5f5;
+    font-style: italic;
+}
+
+/* Resaltar la opción válida */
+.form-group select option[value="pareja-chef"] {
+    background-color: rgba(212, 175, 55, 0.1);
+    font-weight: bold;
+}
+
+/* Añadir hover effect */
+.form-group select:hover {
+    border-color: var(--dark-gold);
+}
