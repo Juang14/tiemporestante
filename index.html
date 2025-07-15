@@ -220,12 +220,13 @@
                 </div>
                                 
                 <div class="form-group">
-                    <label>¿Tiene intolerancia o alergia al ajo?</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="ajo[]" value="intolerancia"> Intolerancia al ajo</label>
-                        <label><input type="checkbox" name="ajo[]" value="alergia"> Alergia al ajo</label>
-                        <label><input type="checkbox" name="ajo[]" value="ninguna"> Ninguna de las anteriores</label>
-                    </div>
+                    <label for="ajo">¿Tiene algún problema con el ajo?</label>
+                    <select id="ajo" name="ajo" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="intolerancia">Intolerancia al ajo</option>
+                        <option value="alergia">Alergia al ajo</option>
+                        <option value="ninguna">Ninguna de las anteriores</option>
+                    </select>
                 </div>
                 
                 <div class="form-group">
